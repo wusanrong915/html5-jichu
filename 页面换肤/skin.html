@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>页面换肤</title>
+		<link type="text/css" rel="stylesheet" href="css/skin.css"/>
+		<!--<script type="text/javascript" src="js/skin.js"></script>-->
+	</head>
+	<body>
+		<fieldset>
+			<legend><h1 style="color: red;">页面换肤</h1></legend>
+			<ul id="a">
+				<li id="one" onclick="fun1()"></li>
+				<li id="two" onclick="fun2()"></li>
+				<li id="three" onclick="fun3()"></li>
+				<li id="four" onclick="fun4()"  class="selected"></li>
+				<li id="five" onclick="fun5()"></li>
+				<li id="six" onclick="fun6()"></li>
+			</ul>
+			<div id="b">
+				<span>Localstorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用</span>
+			</div>
+		</fieldset>
+		<script>
+			var div1 = document.getElementById("b");
+				var color1 = window.localStorage.getItem("item");
+				div1.style.backgroundColor=localStorage.getItem("item");
+				var color = new Array("gray","purple","red","cyan","yellow","greenyellow");
+			    function fun1(){
+					div1.style.backgroundColor = color[0];
+					window.localStorage.setItem("item",color[0]);
+				}
+				function fun2(){
+					div1.style.backgroundColor = color[1];
+					window.localStorage.setItem("item",color[1]);
+				}
+				function fun3(){
+					div1.style.backgroundColor = color[2];
+					window.localStorage.setItem("item",color[2]);
+				}
+				function fun4(){
+					div1.style.backgroundColor = color[3];
+					window.localStorage.setItem("item",color[3]);
+				}
+				function fun5(){
+					div1.style.backgroundColor = color[4];
+					window.localStorage.setItem("item",color[4]);
+				}
+				function fun6(){
+					div1.style.backgroundColor = color[5];
+					window.localStorage.setItem("item",color[5]);
+				}
+		</script>
+	</body>
+</html>
